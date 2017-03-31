@@ -18,7 +18,7 @@ public class DLLNode<T>
 
 
     //--------------v  ACCESSORS  v--------------
-    public T getCargo() { return _cargo; }
+    public T getValue() { return _cargo; }
 
     public DLLNode<T> getNext() { return _nextNode; }
 
@@ -27,8 +27,8 @@ public class DLLNode<T>
 
 
     //--------------v  MUTATORS  v--------------
-    public T setCargo( T newCargo ) {
-	T foo = getCargo();
+    public T setValue( T newCargo ) {
+	T foo = getValue();
 	_cargo = newCargo;
 	return foo;
     }
@@ -58,13 +58,13 @@ public class DLLNode<T>
 
 	/*********************
 	//Create a node
-	DLLNode<String> first = new DLLNode<String>( "cat", null );
+	DLLNode<String> first = new DLLNode<String>( "cat", null, null );
 
 	//Create a new node after the first
-	first.setNext( new DLLNode<String>( "dog", null ) );
+	first.setNext( new DLLNode<String>( "dog", null, null ) );
 
 	//Create a third node after the second
-	first.getNext().setNext( new DLLNode<String>( "cow", null ) );
+	first.getNext().setNext( new DLLNode<String>( "cow", null, null ) );
 
 	DLLNode temp = first; 
 	while( temp != null ) {
