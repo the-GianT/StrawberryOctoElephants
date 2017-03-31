@@ -17,14 +17,29 @@ public class DLLDeque<T> implements Deque<T> {
 
     // Add element to the front w/o violating capacity restrictions
     public void addFirst(T x) {
+	if (_size == 0) { 
+	    _front = new DLLNode<T>(x, null, null);
+	    _end = _front;  
+	} 
+	else {
+	    _front = new DLLNode<T>(x, null, _front); 
+	}
 	_size++;
     }
 
     // Add element to the end w/o violating capacity restrictions
     public void addLast(T x) {
+	if (_size == 0) { 
+	    _front = new DLLNode<T>(x, null, null);
+	    _end = _front;  
+	} 
+	else {
+	    _end.setNext(new DLLNode<T>(x, _end.getPrev(), null)); 
+	    _end = _end.getNext(); 
+	}
 	_size++;
     }
-
+    /*
     // Remove and return first element, or return null if empty
     public T pollFirst() {
 	_size--;
@@ -44,7 +59,7 @@ public class DLLDeque<T> implements Deque<T> {
     public T peekLast() {
 	
     }
-
+    */
     // Return each node separated by spaces
     public String toString() {
 	String retStr = "";
@@ -58,25 +73,25 @@ public class DLLDeque<T> implements Deque<T> {
     
     public static void main(String[] args) {
 
-	/*==================================
-
 	Deque<String> Pew = new DLLDeque<String>();
 
-	System.out.println("Enqueuing...");
+	System.out.println("\nEnqueuing...");
 	Pew.addFirst("an");
 	Pew.addLast("offer");
 	Pew.addFirst("him");
 	Pew.addLast("he");
 	Pew.addFirst("make");
-	Pew.addLast("can't)");
+	Pew.addLast("can't");
 	Pew.addFirst("gonna");
 	Pew.addLast("refuse");
 	Pew.addFirst("I'm");
 
-	System.out.println("Print Deque");
-	System.out.println(Pew);
+	System.out.println("\nPrint Deque...");
+	System.out.println(Pew); // I'm gonna make him an offer he can't refuse
 
-	System.out.println("Dequeuing");
+	/*==================================
+
+	System.out.println("\nDequeuing");
 	System.out.println(Pew.pollFirst()); // I'm
 	System.out.println(Pew.pollLast()); // refuse
 	System.out.println(Pew.pollFirst()); // gonna
@@ -87,7 +102,7 @@ public class DLLDeque<T> implements Deque<T> {
 	System.out.println(Pew.pollLast()); // offer
 	System.out.println(Pew.pollFirst()); // an
 	
-	System.out.println("Return null...");
+	System.out.println("\nReturn null...");
 	System.out.println(Pew.pollFirst());
 	System.out.println(Pew.pollLast());
 	  

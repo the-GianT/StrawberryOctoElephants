@@ -6,11 +6,11 @@
 public interface Deque<E> {
 
     // Add element to the front w/o violating capacity restrictions
-    public void addFirst( T x );
+    public void addFirst( E x );
 
     // Add element to the end w/o violating capacity restrictions
-    public void addLast( T x );
-
+    public void addLast( E x );
+    /*
     // Remove and return first element, or return null if empty
     public E pollFirst();
 
@@ -22,5 +22,5 @@ public interface Deque<E> {
 
     // Return last element
     public E peekLast();
-    
+    */
 }
