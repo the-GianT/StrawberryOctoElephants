@@ -22,8 +22,5 @@ public interface Deque<E> {
 
     // Return last element
     public E peekLast();
-
-    // Return the number of elements
-    public int size();
     
 }
