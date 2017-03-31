@@ -1,5 +1,5 @@
 public interface Deque<E> {
-
+   
     public E addFirst( T x );
 
     public E addLast( T x );
