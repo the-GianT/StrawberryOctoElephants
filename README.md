@@ -4,7 +4,7 @@
 
  Our team decided to use a double-linked list because it was much more efficent than an array based architecture and much easier to implement. It was more efficent to use DLLNode becuase we were able to change the order of the elements by simply moving the pointers and not the physical data itself. For example, if we have a list of [ 3,4,5,6] and we wished to add the number 2 at index 0, and array based architecture would first have to shift all the elements to the right and then place the number 2. However, with a DLLNode, all we have to do is change two pointers. The runtime for the array based architecture would've been O(n) while the DLLNode's runtime would be O(1). In addition, it was easier to implement the DLLNode becuase DLLNode contained methods that allowed us to acess the data very easily (especially the "prev" methods). This allowed us to push and pop from both sides of the Deque without problems.
 
-     	  	   .------.------.------.------.
+     	   .------.------.------.------.
                    |A_  _ |A /\  |A _   |A .   |
                    |( \/ )| /  \ | ( )  | / \  |
                    | \  / | \  / |(_x_) |(_,_) |
