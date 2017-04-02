@@ -10,6 +10,7 @@
                    | \  / | \  / |(_x_) |(_,_) |
                    |  \/ A|  \/ A|  Y  A|  I  A|
                    `------^------^------'------'  -Deque of Cards
+		                     (courtesy of http://ascii.co.uk/art/cards)
    
 
 ## Method Selections
