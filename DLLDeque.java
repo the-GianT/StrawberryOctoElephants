@@ -67,6 +67,22 @@ public class DLLDeque<T> implements Deque<T> {
 	_size--;
 	return rm.getValue();
     }
+
+    //returns first element or null if empty
+    public T peekFirst(){
+	if(_size == 0){
+	    return null;
+	}
+	return _front.getValue();
+    }
+
+    //returns last element or null if empty
+    public T peekLast(){
+	if(_size == 0){
+	    return null;
+	}
+	return _end.getValue();
+    }
     
     // Return each node separated by spaces
     public String toString() {
@@ -77,6 +93,11 @@ public class DLLDeque<T> implements Deque<T> {
 	    dummy = dummy.getNext(); 
 	} 
 	return retStr;
+    }
+    
+    //returns the number of elements in deque
+    public int size(){
+	return _size;
     }
     
     public static void main(String[] args) {
