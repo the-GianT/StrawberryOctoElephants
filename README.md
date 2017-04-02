@@ -1,4 +1,4 @@
-# StrawberryOctoElephants
+### StrawberryOctoElephants
 
 ##Architecture Selection: Double-Linked List
 
