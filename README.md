@@ -1,4 +1,5 @@
 # StrawberryOctoElephants
+### Marcus Ng, Thomas Lin, and Ish Mahdi
 
 ## Architecture Selection: Double-Linked List
 
