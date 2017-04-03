@@ -28,7 +28,7 @@ public class DLLDeque<T> implements Deque<T> {
 	    _front = _front.getPrev();
 	}
 	_size++;
-    }
+    } // O(1)
 
     // Add element to the end w/o violating capacity restrictions
     public void addLast(T x) {
@@ -43,7 +43,7 @@ public class DLLDeque<T> implements Deque<T> {
 	    _end = _end.getNext();
 	}
 	_size++;
-    }
+    } // O(1)
     
     // Remove and return first element, or return null if empty
     public T pollFirst() {
@@ -58,7 +58,7 @@ public class DLLDeque<T> implements Deque<T> {
 	_size--;
 	// Return the value of the removed node
 	return rm.getValue();
-    }
+    } // O(1)
 
     // Remove and return last element, or return null if empty
     public T pollLast() {
@@ -77,7 +77,7 @@ public class DLLDeque<T> implements Deque<T> {
 	_size--;
 	// Return the value of the old node
 	return rm.getValue();
-    }
+    } // O(1)
 
     // Returns first element or null if empty
     public T peekFirst(){
@@ -85,7 +85,7 @@ public class DLLDeque<T> implements Deque<T> {
 	    return null;
 	}
 	return _front.getValue();
-    }
+    } // O(1)
 
     // Returns last element or null if empty
     public T peekLast(){
@@ -93,12 +93,12 @@ public class DLLDeque<T> implements Deque<T> {
 	    return null;
 	}
 	return _end.getValue();
-    }
+    } // O(1)
 
     // Returns the number of elements in deque
     public int size(){
 	return _size;
-    }
+    } // O(1)
     
     // Return each node separated by spaces
     public String toString() {
@@ -109,7 +109,7 @@ public class DLLDeque<T> implements Deque<T> {
 	    dummy = dummy.getNext(); 
 	} 
 	return retStr;
-    }
+    } // O(n)
     
     public static void main(String[] args) {
 
