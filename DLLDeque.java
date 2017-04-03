@@ -17,11 +17,13 @@ public class DLLDeque<T> implements Deque<T> {
 
     // Add element to the front w/o violating capacity restrictions
     public void addFirst(T x) {
-	if (_size == 0) { 
+	// If the deque is empty
+	if (_size == 0) {
+	    // Add a node to the deque
 	    _front = new DLLNode<T>(x, null, null);
 	    _end = _front;  
-	} 
-	else {
+	} else {
+	    // Add a new node to the front and set the old _front's previous to the new node
 	    _front.setPrev(new DLLNode<T>(x, null, _front));
 	    _front = _front.getPrev();
 	}
@@ -30,11 +32,13 @@ public class DLLDeque<T> implements Deque<T> {
 
     // Add element to the end w/o violating capacity restrictions
     public void addLast(T x) {
-	if (_size == 0) { 
+	// If the deque is empty
+	if (_size == 0) {
+	    // Add a node to the deque
 	    _front = new DLLNode<T>(x, null, null);
 	    _end = _front;  
-	} 
-	else {
+	} else {
+	    // Add a new node to the end and set the old _end's next to the new node
 	    _end.setNext(new DLLNode<T>(x, _end, null));
 	    _end = _end.getNext();
 	}
@@ -44,27 +48,34 @@ public class DLLDeque<T> implements Deque<T> {
     // Remove and return first element, or return null if empty
     public T pollFirst() {
 	DLLNode<T> rm = _front;
+	// Return null if the deque is empty
 	if (_size == 0) {
 	    return null;
 	} else {
+	    // Set _front the next node in the deque
 	    _front = _front.getNext();
 	}
 	_size--;
+	// Return the value of the removed node
 	return rm.getValue();
     }
 
     // Remove and return last element, or return null if empty
     public T pollLast() {
 	DLLNode<T> rm = _end;
+	// Return null if the deque is empty
 	if (_size == 0) {
 	    return null;
 	} else if (_size == 1) {
+	    // If deque's size is 1, then set _front to null
 	    _front = null;		 
 	} else {
+	    // Set _end to the new _end node's next pointer to null
 	    _end = _end.getPrev();
 	    _end.setNext(null);
 	}
 	_size--;
+	// Return the value of the old node
 	return rm.getValue();
     }
 
@@ -137,3 +148,5 @@ public class DLLDeque<T> implements Deque<T> {
     }
     
 }
+
+
