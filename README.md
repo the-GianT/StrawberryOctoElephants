@@ -15,21 +15,21 @@
 
 ## Method Selections
 
-addFirst(T x): Allows for enqueuing to one end.
+addFirst(T x): Allows for enqueuing to one end. We did not choose to implement the offerFirst because we did not want a size restriction on the data set.
 
-addLast(T x): Allows for enqueuing to the other end.
+addLast(T x): Allows for enqueuing to the other end. We did not choose to implement offerLast because we did not want a size restriction on the data set.
 
-pollFirst(): Means of dequeuing for one side. Returns null if data set is empty, which avoids errors.
+pollFirst(): Means of dequeuing for one side. We chose this method over remove because it returns null if data set is empty, which avoids errors.
 
-pollLast(): Means of dequeuing for the other side. Also returns null if data set is empty.
+pollLast(): Means of dequeuing for the other side. We chose this method over remove because it returns null if data set is empty.
 
 peekFirst(): Allows for retrieval of first element. Useful to see what you are going to enqueue or dequeue.
 
 peekLast(): Allows for retrieval of last element. Useful to see what you are enqueuing or dequeuing.
 
-toString(): Allows for printing of data set in a easy to read manner.
+toString(): Allows for printing of data set in an easy to read manner.
 
-size(): Accessor that returns the number of elements inside data set.
+size(): Accessor that returns the number of elements inside data set. This way we can access the value of the _size variable outside of the class.
 
 
 
