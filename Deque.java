@@ -18,10 +18,10 @@ public interface Deque<E> {
     public E pollLast();
 
     // Look at the first element, or return null if empty
-    public T peekFirst();
+    public E peekFirst();
 
     // Look at the last element, or return null if empty
-    public T peekLast();
+    public E peekLast();
 
     // Return the current size of the deque
     public int size();
