@@ -126,9 +126,16 @@ public class DLLDeque<T> implements Deque<T> {
 	Pew.addLast("refuse");
 	Pew.addFirst("I'm");
 
+	System.out.println("\nPeek...");
+	System.out.println(Pew.peekFirst()); // I'm
+	System.out.println(Pew.peekLast()); // refuse
+	
 	System.out.println("\nPrint Deque...");
 	System.out.println(Pew); // I'm gonna make him an offer he can't refuse
 
+	System.out.println("\nSize...");
+	System.out.println(Pew.size()); // 9
+	
 	System.out.println("\nDequeuing...");
 	System.out.println(Pew.pollFirst()); // I'm
 	System.out.println(Pew.pollLast()); // refuse
@@ -143,6 +150,12 @@ public class DLLDeque<T> implements Deque<T> {
 	System.out.println("\nEmpty Deque Dequeue (return null)...");
 	System.out.println(Pew.pollFirst());
 	System.out.println(Pew.pollLast());
+	System.out.println("\nPeek...(null)");
+	System.out.println(Pew.peekFirst()); // null
+	System.out.println(Pew.peekLast()); // null
+
+	System.out.println("\nSize...");
+	System.out.println(Pew.size()); // 0
 	/*==================================	  
 	  ==================================*/
     }

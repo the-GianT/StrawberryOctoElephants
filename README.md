@@ -32,5 +32,10 @@ toString(): Allows for printing of the data in the deque starting from the front
 
 size(): Accessor that returns the number of elements inside data set. This allows us to access the value of the _size variable outside of the class.
 
+## Improvements
 
+DLLDeque.java
+- Added test cases for peekFirst()
+- Added test cases for peekLast()
+- Added test cases for size()
 
